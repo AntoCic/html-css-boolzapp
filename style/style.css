@@ -68,7 +68,7 @@ input{
   align-items: center;
 }
 
-/* .col-12 {
+.col-12 {
   width: 100%;
 }
 .col-6 {
@@ -79,7 +79,10 @@ input{
 }
 .col-8 {
   width: calc((100% / 3) * 2);
-} */
+}
+.max-col-8{
+  max-width: calc((100% / 3) * 2);
+}
 
 .gap-30 {
   gap: 30px;
@@ -102,6 +105,7 @@ input{
   border: 0;
   background-color: transparent;
   color: #b1b1b1;
+  flex-shrink: 0;
 }
 
 /* COMPONENTS */
@@ -207,8 +211,15 @@ padding: 5px 10px;
   border-right: 1px solid #EAEAEA;
   border-bottom: 1px solid #EAEAEA;
 }
-
-
+.user-last-data{
+  padding-right: 5px;
+  color: rgb(194, 194, 194);
+  font-size: 0.9em;
+}
+.user-last-msg{
+  color: rgb(194, 194, 194);
+  font-size: 0.9em;
+}
 
 /* MAIN */
 main {
@@ -219,11 +230,52 @@ main {
   flex-grow: 1;
   background-color: #fafafa;
 }
+.message-body {
+  background-image: url(../img/mine.jpg);
+  height: 100%;
+  width: calc(100% - 10px);
+  padding: 20px;
+}
+
+.new-message input {
+  flex-grow: 1;
+  padding: 10px;
+}
+.my-msg{
+  background-color: #D5FABA;
+  height:fit-content;
+  padding: 15px;
+  border-radius: 15px;
+  align-self: flex-end;
+  margin: 20px 10px;
+}
+.my-msg{
+  background-color: #D5FABA;
+  height:fit-content;
+  padding: 15px;
+  border-radius: 15px;
+  align-self: flex-end;
+  margin: 5px 0;
+}
+.current-user-msg{
+  background-color: white;
+  height:fit-content;
+  padding: 15px;
+  border-radius: 15px;
+  align-self: flex-start;
+  margin: 5px 0;
+}
+#last-data-msg{
+  text-align: right;
+  font-size: 0.9em;
+  color: rgb(194, 194, 194);
+}
 .new-message {
   height: var(--h_bar);
   flex-shrink: 0;
   background-color: #F3EEEB;
 }
+
 
 /*************************************************
     MEDIA RESPONSIVE
@@ -265,15 +317,7 @@ main {
     flex-wrap: wrap;
     justify-content: space-between;
   }
-  .user-last-data{
-    padding-right: 5px;
-    color: rgb(194, 194, 194);
-    font-size: 0.9em;
-  }
-  .user-last-msg{
-    color: rgb(194, 194, 194);
-    font-size: 0.9em;
-  }
+  
 
   /* MAIN */
 }

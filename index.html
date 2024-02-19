@@ -103,6 +103,11 @@
 
         <main class="flex flex-column">
             <section class="head">
+                <img class="avatar" src="./img/avatar_1.jpg" alt="">
+                <span class="current-user-info">
+                    <p class="current-user-name">Michele</p>
+                    <div class="user-last-data">Ultimo accesso oggi alle 16:15</div>
+                </span>
                 <div class="head-side-bt">
                     <button class="bt-style1"><i class="fa-solid fa-magnifying-glass"></i></button>
                     <button class="bt-style1"><i class="fa-solid fa-paperclip"></i></button>
@@ -110,10 +115,30 @@
                 </div>
             </section>
             <section class="message-box">
-                <p>message box</p>
+                <div class="message-body flex flex-column">
+                    <div class="max-col-8 my-msg">
+                        <p id="last-msg">
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate nemo sed provident at
+                            quis quidem officia excepturi fugit autem assumenda.
+                        </p>
+                        <p id="last-data-msg">16:13</p>                        
+                    </div>
+                    <div class="max-col-8 current-user-msg">
+                        <p id="last-msg">
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate nemo sed provident at
+                            quis quidem officia excepturi fugit autem assumenda.
+                        </p>
+                        <p id="last-data-msg">16:13</p>
+                    </div>
+
+                </div>
             </section>
-            <form class="new-message">
-                <p>new message</p>
+            <form class="new-message flex align-center">
+                <form>
+                    <button class="bt-style1"><i class="fa-regular fa-face-smile"></i></button>
+                    <input type="text" placeholder="Scrivi messaggio">
+                    <button class="bt-style1"><i class="fa-solid fa-microphone"></i></button>
+                </form>
             </form>
         </main>
     </div>
