@@ -2,6 +2,7 @@
 :root {
   /* --gutter: 12px; */
   --h_bar: 70px;
+  --w-aside: 370px;
 }
 /*************************************************
     RESET
@@ -24,6 +25,9 @@ a {
 
 img {
   max-width: 100%;
+}
+input{
+  border: 0;
 }
 
 /************************************************
@@ -154,6 +158,7 @@ aside {
   display: none;
 }
 
+
 .info-icon{
   aspect-ratio: 1/1;
   font-size: 26px;
@@ -177,11 +182,33 @@ aside {
   color: gray;
   text-decoration: underline;
 }
-
 .contact {
   flex-grow: 1;
   background-color: #fafafa;
 }
+.contact .search{
+  margin: 5px;
+  background-color: #FFFFFF;
+  display: none;
+  padding: 5px 0;
+}
+.contact .search input{
+  padding: 5px;
+  width: 250px; /* da corregere --------------------------------------------------- */ 
+}
+.contact .search .bt-style1{
+font-size: 20px;
+padding: 5px 10px; 
+}
+
+.user{
+  background-color: #FFFFFF;
+  margin-right: 10px;
+  border-right: 1px solid #EAEAEA;
+  border-bottom: 1px solid #EAEAEA;
+}
+
+
 
 /* MAIN */
 main {
@@ -212,6 +239,9 @@ main {
   main .head-side-bt {
     display: initial;  
   }
+  .user-info{
+    display: none;
+  }
 
   /* MAIN */
 }
@@ -219,13 +249,30 @@ main {
 @media (min-width: 992px) {
   /* ASIDE */
   aside {
-    width: 370px;
+    width: var(--w-aside);
   }
   aside .head-side-bt {
     display: initial;
   }
   .info-msg-box{
     display: initial;
+  }
+  .contact .search{
+    display: initial;
+  }
+  .user-info{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .user-last-data{
+    padding-right: 5px;
+    color: rgb(194, 194, 194);
+    font-size: 0.9em;
+  }
+  .user-last-msg{
+    color: rgb(194, 194, 194);
+    font-size: 0.9em;
   }
 
   /* MAIN */
