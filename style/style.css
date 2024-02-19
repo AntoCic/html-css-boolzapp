@@ -92,6 +92,13 @@ img {
 .text-right {
   text-align: right;
 }
+.bt-style1 {
+  margin: 0 15px;
+  font-size: 26px;
+  border: 0;
+  background-color: transparent;
+  color: #b1b1b1;
+}
 
 /* COMPONENTS */
 /* buttons */
@@ -124,7 +131,23 @@ aside {
   height: var(--h_bar);
   flex-shrink: 0;
   background-color: #eaeaea;
+  display: flex;
+  align-items: center;
 }
+
+.avatar {
+  width: 50px;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  display: inline-block;
+  border-radius: 50%;
+  margin: 10px 20px;
+}
+.head-side-bt {
+  margin-left: auto;
+  display: none;
+}
+
 .info-msg {
   flex-shrink: 0;
   background-color: #a6d7f9;
@@ -146,6 +169,7 @@ main {
 .new-message {
   height: var(--h_bar);
   flex-shrink: 0;
+  background-color: #F3EEEB;
 }
 
 /*************************************************
@@ -159,6 +183,9 @@ main {
     flex-direction: column;
     flex-shrink: 0;
   }
+  main .head-side-bt {
+    display: initial;  
+  }
 
   /* MAIN */
 }
@@ -167,6 +194,9 @@ main {
   /* ASIDE */
   aside {
     width: 370px;
+  }
+  aside .head-side-bt {
+    display: initial;
   }
 
   /* MAIN */

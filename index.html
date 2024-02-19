@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,12 +8,17 @@
     <script src="https://kit.fontawesome.com/1e62d76f8b.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./style/style.css">
 </head>
-<body class="debug">
+
+<body class="debg">
     <div class="app flex">
         <aside>
             <section class="head">
-                <p>head</p>
-
+                <img class="avatar" src="./img/avatar_io.jpg" alt="">
+                <span class="head-side-bt">
+                    <button class="bt-style1"><i class="fa-solid fa-circle-notch"></i></button>
+                    <button class="bt-style1"><i class="fa-solid fa-message"></i></button>
+                    <button class="bt-style1"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                </span>
             </section>
             <section class="info-msg">
                 <p>info</p>
@@ -20,11 +26,15 @@
             <section class="contact">
                 <p>contact</p>
             </section>
-        </aside> 
-        
+        </aside>
+
         <main class="flex flex-column">
             <section class="head">
-                <p>head</p>
+                <div class="head-side-bt">
+                    <button class="bt-style1"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    <button class="bt-style1"><i class="fa-solid fa-paperclip"></i></button>
+                    <button class="bt-style1"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                </div>
             </section>
             <section class="message-box">
                 <p>message box</p>
@@ -33,6 +43,7 @@
                 <p>new message</p>
             </form>
         </main>
-    </div>    
+    </div>
 </body>
+
 </html>
