@@ -148,10 +148,36 @@ aside {
   display: none;
 }
 
-.info-msg {
+.info-msg-box {
   flex-shrink: 0;
   background-color: #a6d7f9;
+  display: none;
 }
+
+.info-icon{
+  aspect-ratio: 1/1;
+  font-size: 26px;
+  background-color: white;
+  border-radius: 50%;
+  color: #a6d7f9;
+  width: 50px;
+  padding: 10px;
+  margin: 20px;
+  display: inline-block;
+}
+.info-msg{
+  display: inline-block;
+}
+.info-msg p:first-child{
+  font-weight: bold;
+}
+
+.info-msg p:last-child{
+  font-size: 0.9em;
+  color: gray;
+  text-decoration: underline;
+}
+
 .contact {
   flex-grow: 1;
   background-color: #fafafa;
@@ -196,6 +222,9 @@ main {
     width: 370px;
   }
   aside .head-side-bt {
+    display: initial;
+  }
+  .info-msg-box{
     display: initial;
   }
 
