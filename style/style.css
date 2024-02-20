@@ -26,7 +26,7 @@ a {
 img {
   max-width: 100%;
 }
-input{
+input {
   border: 0;
 }
 
@@ -80,7 +80,7 @@ input{
 .col-8 {
   width: calc((100% / 3) * 2);
 }
-.max-col-8{
+.max-col-8 {
   max-width: calc((100% / 3) * 2);
 }
 
@@ -99,6 +99,9 @@ input{
 .text-right {
   text-align: right;
 }
+
+/* COMPONENTS */
+/* buttons */
 .bt-style1 {
   margin: 0 15px;
   font-size: 26px;
@@ -108,8 +111,44 @@ input{
   flex-shrink: 0;
 }
 
-/* COMPONENTS */
-/* buttons */
+/* card */
+.card {
+  display: flex;
+  align-items: center;
+}
+.card .card-img {
+  flex-shrink: 0;
+  width: 50px;
+  margin: 10px 20px;
+  text-align: center;
+}
+.card .card-img img {
+  aspect-ratio: 1/1;
+  display: block;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.card .card-content {
+  display: none;
+}
+.card .card-content > p:first-child {
+  font-weight: bold;
+}
+.card .card-content > p:last-child {
+  color: rgb(194, 194, 194);
+  font-size: 0.9em;
+}
+.card .card-side {
+  display: none;
+  flex-grow: 1;
+  text-align: right;
+}
+.card .card-side li {
+  display: inline;
+  margin: 0 15px;
+  font-size: 26px;
+  color: #b1b1b1;
+}
 
 /*************************************************
     GENERAL STYLES
@@ -123,102 +162,69 @@ body {
     #dddbd1 15vh,
     #d2dbdc 100%
   );
-  height: 100vh;
-  padding: 31px 0;
 }
 .app {
-  width: 80%;
-  height: 100%;
+  width: 100%;
+  height: 100vh;
   margin: 0 auto;
 }
 /* ASIDE */
 aside {
   display: none;
+  border-right: 1px solid rgb(219, 219, 219);
 }
 .head {
-  height: var(--h_bar);
-  flex-shrink: 0;
   background-color: #eaeaea;
-  display: flex;
-  align-items: center;
-}
-
-.avatar {
-  width: 50px;
-  aspect-ratio: 1/1;
-  object-fit: cover;
-  display: inline-block;
-  border-radius: 50%;
-  margin: 10px 20px;
-}
-.head-side-bt {
-  margin-left: auto;
-  display: none;
 }
 
 .info-msg-box {
-  flex-shrink: 0;
   background-color: #a6d7f9;
   display: none;
 }
-
-
-.info-icon{
+.info-icon {
   aspect-ratio: 1/1;
   font-size: 26px;
   background-color: white;
   border-radius: 50%;
   color: #a6d7f9;
-  width: 50px;
   padding: 10px;
-  margin: 20px;
   display: inline-block;
 }
-.info-msg{
-  display: inline-block;
-}
-.info-msg p:first-child{
-  font-weight: bold;
-}
-
-.info-msg p:last-child{
-  font-size: 0.9em;
+.info-msg-box .card-content p:last-child {
   color: gray;
   text-decoration: underline;
 }
+
 .contact {
   flex-grow: 1;
   background-color: #fafafa;
 }
-.contact .search{
+.search {
+  display: none;
   margin: 5px;
   background-color: #FFFFFF;
-  display: none;
+  /* background-color: #ff0000; */
   padding: 5px 0;
 }
-.contact .search input{
+.search .card-img{
+  font-size: 16px;
+  margin: 0 10px;
+}
+.search input {
+  width: 100%;
   padding: 5px;
-  width: 250px; /* da corregere --------------------------------------------------- */ 
 }
-.contact .search .bt-style1{
-font-size: 20px;
-padding: 5px 10px; 
-}
-
 .user{
-  background-color: #FFFFFF;
-  margin-right: 10px;
-  border-right: 1px solid #EAEAEA;
-  border-bottom: 1px solid #EAEAEA;
+  background-color: #ffffff;
+  
+  border-right: 1px solid #eaeaea;
+  border-bottom: 1px solid #eaeaea;
 }
-.user-last-data{
-  padding-right: 5px;
-  color: rgb(194, 194, 194);
+.user .card-side{
+  color: #b1b1b1;
   font-size: 0.9em;
-}
-.user-last-msg{
-  color: rgb(194, 194, 194);
-  font-size: 0.9em;
+  align-self: flex-start;
+  padding: 20px 15px;
 }
 
 /* MAIN */
@@ -241,31 +247,31 @@ main {
   flex-grow: 1;
   padding: 10px;
 }
-.my-msg{
-  background-color: #D5FABA;
-  height:fit-content;
+.my-msg {
+  background-color: #d5faba;
+  height: fit-content;
   padding: 15px;
   border-radius: 15px;
   align-self: flex-end;
   margin: 20px 10px;
 }
-.my-msg{
-  background-color: #D5FABA;
-  height:fit-content;
+.my-msg {
+  background-color: #d5faba;
+  height: fit-content;
   padding: 15px;
   border-radius: 15px;
   align-self: flex-end;
   margin: 5px 0;
 }
-.current-user-msg{
+.current-user-msg {
   background-color: white;
-  height:fit-content;
+  height: fit-content;
   padding: 15px;
   border-radius: 15px;
   align-self: flex-start;
   margin: 5px 0;
 }
-#last-data-msg{
+#last-data-msg {
   text-align: right;
   font-size: 0.9em;
   color: rgb(194, 194, 194);
@@ -273,9 +279,8 @@ main {
 .new-message {
   height: var(--h_bar);
   flex-shrink: 0;
-  background-color: #F3EEEB;
+  background-color: #f3eeeb;
 }
-
 
 /*************************************************
     MEDIA RESPONSIVE
@@ -288,36 +293,34 @@ main {
     flex-direction: column;
     flex-shrink: 0;
   }
-  main .head-side-bt {
-    display: initial;  
-  }
-  .user-info{
-    display: none;
-  }
 
   /* MAIN */
+  /* main .head-side-bt {
+    display: initial;
+  } */
 }
 /* breakpoints Large*/
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
+  .app {
+    width: 80%;
+    padding: 31px 0;
+  }
   /* ASIDE */
   aside {
     width: var(--w-aside);
   }
-  aside .head-side-bt {
+  .card .card-content {
     display: initial;
   }
-  .info-msg-box{
+  .card .card-side {
     display: initial;
   }
-  .contact .search{
-    display: initial;
+  .info-msg-box {
+    display: inherit;
   }
-  .user-info{
+  .search {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
   }
-  
 
   /* MAIN */
 }
